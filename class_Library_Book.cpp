@@ -243,6 +243,7 @@ _Bool Library::find(string searcher)
 
 void menu();
 void menu1();
+void menu2();
 vector <Book>& bubblebeam(vector <Book>& bubblebooks);
 vector <Book>& bubblegun(vector <Book>& bubblebooks);
 Book new_book(int sum_books);
