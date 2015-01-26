@@ -287,7 +287,7 @@ system("color f1");
 		
 		if (choose==3)
 		{
-            search_books(sum_books, mybooks);
+            		search_books(sum_books, mybooks);
 		}
 		
 		if (choose==4)
@@ -297,7 +297,7 @@ system("color f1");
 		
 		if (choose==5)
 		{
-            search_smaller(sum_books, mybooks);
+            		search_smaller(sum_books, mybooks);
 		}
 		
 		if (choose==6)
@@ -319,12 +319,12 @@ system("color f1");
 		
 		if (choose==8)
 		{
-            print_libraries(mylibraries);
+            		print_libraries(mylibraries);
 		}
 		
 		if (choose==9)
 		{
-            search_libraries(sum_libraries, mylibraries);
+            		search_libraries(sum_libraries, mylibraries);
 		}
 		
 		if (choose==10)
@@ -334,17 +334,17 @@ system("color f1");
 		
 		if (choose==11)
 		{
-            mylibraries=edit_library(mybooks, mylibraries);
+            		mylibraries=edit_library(mybooks, mylibraries);
 		}
 		
 		if (choose==12)
 		{
-            mybooks=delete_book(mybooks);
+            		mybooks=delete_book(mybooks);
 		}
 		
 		if (choose==13)
 		{
-            mylibraries=delete_library(mylibraries);
+            		mylibraries=delete_library(mylibraries);
 		}
 		
 		if (choose==0)
@@ -364,10 +364,10 @@ system("pause");
 
 void menu()
 {
-    system("cls");
-    cout<<endl;
-    cout<<" Add book ----------------------------------------- 1"<<endl;
-    cout<<" Show books --------------------------------------- 2"<<endl;
+    	system("cls");
+    	cout<<endl;
+    	cout<<" Add book ----------------------------------------- 1"<<endl;
+    	cout<<" Show books --------------------------------------- 2"<<endl;
 	cout<<" Find books by keyword ---------------------------- 3"<<endl;
 	cout<<" Find books by price (bigger) --------------------- 4"<<endl;
 	cout<<" Find books by price (smaller) -------------------- 5"<<endl;
@@ -386,8 +386,8 @@ void menu()
 void menu1()
 {
 	cout<<endl;
-    cout<<" Add book to library ------------------------------ 1"<<endl;
-    cout<<" Show all books ----------------------------------- 2"<<endl;
+    	cout<<" Add book to library ------------------------------ 1"<<endl;
+    	cout<<" Show all books ----------------------------------- 2"<<endl;
 	cout<<" Library ready ------------------------------------ 0"<<endl<<endl;
 	cout<<" CHOICE: ";
 }
@@ -395,9 +395,9 @@ void menu1()
 void menu2()
 {
 	cout<<endl;
-    cout<<" Add book to library ------------------------------ 1"<<endl;
-    cout<<" Delete book from library ------------------------- 2"<<endl;
-    cout<<" Show all books ----------------------------------- 3"<<endl;
+    	cout<<" Add book to library ------------------------------ 1"<<endl;
+    	cout<<" Delete book from library ------------------------- 2"<<endl;
+    	cout<<" Show all books ----------------------------------- 3"<<endl;
 	cout<<" Library ready ------------------------------------ 0"<<endl<<endl;
 	cout<<" CHOICE: ";
 }
@@ -493,7 +493,7 @@ Library new_library(int sum_libraries, vector <Book>& mybooks, vector <Library>&
 		
 		if (choice==1)
 		{
-            cout<<" SELECT A BOOK FROM 1 TO "<<mybooks.size()<<" : ";
+            		cout<<" SELECT A BOOK FROM 1 TO "<<mybooks.size()<<" : ";
 			cin>>xchoice;
 			cout<<endl;
 			if ((xchoice>=1)&&(xchoice<=mybooks.size()))
@@ -519,7 +519,7 @@ Library new_library(int sum_libraries, vector <Book>& mybooks, vector <Library>&
 				system("pause");
 				flagizard=1;
 			}else{
-                newlibrary.setlibbooks(libbooks);
+                		newlibrary.setlibbooks(libbooks);
 				flagizard=0;
 				
 				cout<<"** LIBRARY "<<(sum_libraries+1)<<" READY **"<<endl<<endl;
@@ -528,7 +528,7 @@ Library new_library(int sum_libraries, vector <Book>& mybooks, vector <Library>&
 		
 		if ((choice!=0)&&(choice!=1)&&(choice!=2))
 		{
-            cout<<" @@@ ERROR: WRONG CHOICE @@@"<<endl<<endl;
+            		cout<<" @@@ ERROR: WRONG CHOICE @@@"<<endl<<endl;
 		}
 	}
 	
@@ -537,7 +537,7 @@ Library new_library(int sum_libraries, vector <Book>& mybooks, vector <Library>&
 
 void print_books(vector <Book>& mybooks)
 {
-    if (mybooks.size()==0)
+    	if (mybooks.size()==0)
 	{
 		cout<<" NO BOOKS YET"<<endl<<endl;
 	}else{
@@ -571,7 +571,7 @@ void print_libraries(vector <Library>& mylibraries)
 
 vector <Book>& bubblebeam(vector <Book>& bubblebooks)
 {
-    for(int i=0; i<bubblebooks.size(); ++i)
+    	for(int i=0; i<bubblebooks.size(); ++i)
 	{
 		for(int j=bubblebooks.size()-1; j>i; --j)
 		{
@@ -604,7 +604,7 @@ vector <Book>& bubblebeam(vector <Book>& bubblebooks)
 
 vector <Book>& bubblegun(vector <Book>& bubblebooks)
 {
-    for(int i=0; i<bubblebooks.size(); ++i)
+    	for(int i=0; i<bubblebooks.size(); ++i)
 	{
 		for(int j=bubblebooks.size()-1; j>i; --j)
 		{
@@ -639,7 +639,7 @@ void search_books(int sum_books, vector <Book>& mybooks)
 {
 	string searcher, CPPbug;
 	
-    getline(cin,CPPbug);
+    	getline(cin,CPPbug);
 	cout<<" KEYWORD TO SEARCH: ";
 	getline(cin,searcher);
 
@@ -756,7 +756,7 @@ void search_full(int sum_books, vector <Book>& mybooks)
 	{
 		cout<<" NO BOOKS YET"<<endl<<endl;
 	}else{
-        getline(cin,CPPbug);
+        	getline(cin,CPPbug);
 		cout<<" KEYWORD TO SEARCH: ";
 		getline(cin,searcher);
 
@@ -815,7 +815,7 @@ void search_libraries(int sum_libraries, vector <Library>& mylibraries)
 {
 	string searcher, CPPbug;
 
-    getline(cin,CPPbug);
+    	getline(cin,CPPbug);
 	cout<<" KEYWORD TO SEARCH: ";
 	getline(cin,searcher);
 
@@ -854,7 +854,7 @@ vector <Book>& delete_book(vector <Book>& mybooks)
 	{
 		while(true)
 		{
-	        cout<<" DELETE A BOOK FROM 1 - "<<mybooks.size()<<" (press 0 for cancel) : ";
+	        	cout<<" DELETE A BOOK FROM 1 - "<<mybooks.size()<<" (press 0 for cancel) : ";
 			cin>>choice;
 			cout<<endl;
 			if ((choice>=1)&&(choice<=mybooks.size()))
@@ -882,7 +882,7 @@ vector <Library>& delete_library(vector <Library>& mylibraries)
 	{
 		while(true)
 		{
-	        cout<<" DELETE A LIBRARY FROM 1 - "<<mylibraries.size()<<" (press 0 for cancel) : ";
+	        	cout<<" DELETE A LIBRARY FROM 1 - "<<mylibraries.size()<<" (press 0 for cancel) : ";
 			cin>>choice;
 			cout<<endl;
 			if ((choice>=1)&&(choice<=mylibraries.size()))
@@ -903,12 +903,12 @@ vector <Library>& delete_library(vector <Library>& mylibraries)
 
 vector <Book>& edit_book(vector <Book>& mybooks)
 {
-    int choice;
+    	int choice;
 	string isbn, title, author, subject, xchoice, CPPbug;
 	double price;
 	Book newbook(isbn, title, author, subject, price);
 	
-    if (mybooks.size()!=0)
+    	if (mybooks.size()!=0)
 	{
 		print_books(mybooks);
 		while(true)
@@ -918,7 +918,7 @@ vector <Book>& edit_book(vector <Book>& mybooks)
 			cout<<endl;
 			if ((choice>=1)&&(choice<=mybooks.size()))
 			{
-                newbook=mybooks[(choice-1)];
+                		newbook=mybooks[(choice-1)];
                 
 				newbook.getisbn();
 				while(true)
@@ -1058,8 +1058,8 @@ vector <Library>& edit_library(vector <Book>& mybooks, vector <Library>& mylibra
 				cout<<endl;
 				if ((choice>=1)&&(choice<=mylibraries.size()))
 				{
-	                newlibrary=mylibraries[(choice-1)];
-	                libbooks=newlibrary.getlibbooks();
+	                		newlibrary=mylibraries[(choice-1)];
+	                		libbooks=newlibrary.getlibbooks();
 
 					newlibrary.getlibname();
 					while(true)
@@ -1097,10 +1097,10 @@ vector <Library>& edit_library(vector <Book>& mybooks, vector <Library>& mylibra
 
 								if (zchoice==1)
 								{
-		                        	cout<<" *** ALL REGISTERED BOOKS ***"<<endl;
+		                        				cout<<" *** ALL REGISTERED BOOKS ***"<<endl;
 									print_books(mybooks);
 
-						            cout<<" SELECT A BOOK FROM 1 TO "<<mybooks.size()<<" : ";
+						            		cout<<" SELECT A BOOK FROM 1 TO "<<mybooks.size()<<" : ";
 									cin>>schoice;
 									cout<<endl;
 									if ((schoice>=1)&&(schoice<=mybooks.size()))
@@ -1116,7 +1116,7 @@ vector <Library>& edit_library(vector <Book>& mybooks, vector <Library>& mylibra
 								{
 									if (libbooks.size()>0)
 									{
-                                        cout<<" *** LIBRARY'S BOOKS ***"<<endl;
+                                        					cout<<" *** LIBRARY'S BOOKS ***"<<endl;
 										for(int i=0; i<libbooks.size(); ++i)
 										{
 											cout<<" --- BOOK "<<(i+1)<<" ---"<<endl;
@@ -1127,7 +1127,7 @@ vector <Library>& edit_library(vector <Book>& mybooks, vector <Library>& mylibra
 											cout<<" PRICE: "<<libbooks[i].getprice()<<endl<<endl;
 										}
 									
-							            cout<<" SELECT A BOOK FROM 1 TO "<<libbooks.size()<<" : ";
+							            		cout<<" SELECT A BOOK FROM 1 TO "<<libbooks.size()<<" : ";
 										cin>>schoice;
 										cout<<endl;
 										if ((schoice>=1)&&(schoice<=libbooks.size()))
@@ -1150,7 +1150,7 @@ vector <Library>& edit_library(vector <Book>& mybooks, vector <Library>& mylibra
 
 								if (zchoice==0)
 								{
-                                    if (libbooks.size()==0)
+                                    					if (libbooks.size()==0)
 									{
 										cout<<" @@@ ERROR: SELECT AT LEAST 1 BOOK @@@"<<endl<<endl;
 										system("pause");
@@ -1164,7 +1164,7 @@ vector <Library>& edit_library(vector <Book>& mybooks, vector <Library>& mylibra
 
 								if ((zchoice!=0)&&(zchoice!=1)&&(zchoice!=2)&&(zchoice!=3))
 								{
-						            cout<<" @@@ ERROR: WRONG CHOICE @@@"<<endl<<endl;
+						            		cout<<" @@@ ERROR: WRONG CHOICE @@@"<<endl<<endl;
 								}
 							}
 							break;
